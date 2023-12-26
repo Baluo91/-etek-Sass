@@ -3,20 +3,22 @@
 
 
 body {
-   background: $secondary-color
+   background: $ternary-color
 }
 
 h1 {
-    color: $main-color;
     border: 3px solid $border-color;
-    font-size: $font-size;
+    font-size: 35px;
+    @include textStyle;
 }
 
 p {
-    background: $main-color;
+    @include textStyle;
     border: 5px solid $border-color;
-    font-size: $font-size;
+    font-size: 18px;
 }
+
+
 
 .alert-button {
     @include myButton;

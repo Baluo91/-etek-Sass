@@ -2,3 +2,9 @@
     background: orange;
     color: #fff;
 }
+
+@mixin textStyle {
+    font-family: serif;
+    color: black;
+    text-align: center;
+}

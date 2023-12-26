@@ -1,18 +1,22 @@
 @charset "UTF-8";
 body {
-  background: blue;
+  background: rgba(78, 78, 2, 0.532);
 }
 
 h1 {
-  color: red;
   border: 3px solid rgb(184, 248, 10);
   font-size: 35px;
+  font-family: serif;
+  color: black;
+  text-align: center;
 }
 
 p {
-  background: red;
+  font-family: serif;
+  color: black;
+  text-align: center;
   border: 5px solid rgb(184, 248, 10);
-  font-size: 35px;
+  font-size: 18px;
 }
 
 .alert-button {
