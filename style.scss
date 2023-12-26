@@ -1,7 +1,6 @@
 @import "partials/variables";
 @import "partials/mixins";
 
-
 body {
    background: $ternary-color
 }
@@ -36,9 +35,20 @@ img {
     @include shadow(5px 5px 10px green, 10px 5px 10px blue); //
 }
 
-@include our-links;
+// @include our-links;
 
+// === nesting ===
+.first-list {
+   font-size: 23px;
 
+     li {
+         color: #fff;
+
+         a {
+            text-decoration: none;
+         }
+    }
+}
 
 /*
 1. pojmenování proměnných,

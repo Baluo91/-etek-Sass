@@ -47,9 +47,13 @@ img {
   box-shadow: 5px 5px 10px green, 10px 5px 10px blue;
 }
 
-a {
-  color: blue;
-  font-style: italic;
+.first-list {
+  font-size: 23px;
+}
+.first-list li {
+  color: #fff;
+}
+.first-list li a {
   text-decoration: none;
 }
 

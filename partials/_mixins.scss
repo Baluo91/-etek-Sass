@@ -30,13 +30,13 @@
 }
 
 // === všeobecná mixina ===
-@mixin our-links {
-    a {
-        color: $secondary-color;
-        font-style: italic;
-        text-decoration: none;
-    }
-}
+// @mixin our-links {
+//     a {
+//         color: $secondary-color;
+//         font-style: italic;
+//         text-decoration: none;
+//     }
+// }
 //* v style.scss len vyvoláme @include our-links; */
 
 @mixin shadow($shadows...) {
