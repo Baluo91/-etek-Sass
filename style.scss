@@ -7,18 +7,18 @@ body {
 }
 
 h1 {
-    border: 3px solid $border-color;
-    font-size: 35px;
     @include textStyle;
+    font-size: 35px;
+}
+
+h2 {
+    @include big-text;
 }
 
 p {
     @include textStyle;
-    border: 5px solid $border-color;
     font-size: 18px;
 }
-
-
 
 .alert-button {
     @include myButton;
@@ -28,6 +28,11 @@ p {
 .bigger-button {
     @include myButton;
     padding: 10px 15px;
+}
+
+img {
+    @include image;
+    border: 2px solid black;
 }
 
 /*
