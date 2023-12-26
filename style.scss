@@ -32,6 +32,7 @@ p {
 
 img {
     @include image;
+    @include rounded(10px);
     border: 2px solid black;
 }
 

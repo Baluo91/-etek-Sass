@@ -1,17 +1,16 @@
 
-@mixin rounded {
-    border-radius: 20px;
+@mixin rounded($radius) {
+    border-radius: $radius;
 }
 
 @mixin image {
     width: 300px;
-    @include rounded;
 }
 
 @mixin myButton {
+    @include rounded(25px);
     background: orange;
     color: #fff;
-    @include rounded;
 }
 
 @mixin textStyle {
