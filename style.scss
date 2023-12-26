@@ -38,15 +38,27 @@ img {
 // @include our-links;
 
 // === nesting ===
-.first-list {
-   font-size: 23px;
+// .first-list {
+//    font-size: 23px;
 
-     li {
-         color: #fff;
+//      li {
+//          color: #fff;
 
-         a {
-            text-decoration: none;
-         }
+//          a {
+//             text-decoration: none;
+//          }
+//     }
+// }
+
+// 25. SCSS a Sass - Nesting: nesting a hover
+
+a {
+    color: red;
+    text-decoration: none;
+    font-size: 18px;
+
+    &:hover {
+        color: blue;
     }
 }
 
