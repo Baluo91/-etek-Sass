@@ -44,6 +44,12 @@ img {
   border: 2px solid black;
 }
 
+a {
+  color: blue;
+  font-style: italic;
+  text-decoration: none;
+}
+
 /*
 1. pojmenování proměnných,
 2. uložení jedné proměnné do druhé,

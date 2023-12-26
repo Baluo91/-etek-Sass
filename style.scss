@@ -35,6 +35,8 @@ img {
     border: 2px solid black;
 }
 
+@include our-links;
+
 /*
 1. pojmenování proměnných,
 2. uložení jedné proměnné do druhé,
