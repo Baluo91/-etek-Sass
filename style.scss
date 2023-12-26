@@ -1,4 +1,6 @@
 @import "variables.scss";
+@import "mixins.scss";
+
 
 body {
    background: $secondary-color
@@ -15,6 +17,17 @@ p {
     border: 5px solid $border-color;
     font-size: $font-size;
 }
+
+.alert-button {
+    @include myButton;
+    padding: 5px 10px;
+}
+
+.bigger-button {
+    @include myButton;
+    padding: 10px 15px;
+}
+
 /*
 1. pojmenování proměnných,
 2. uložení jedné proměnné do druhé,

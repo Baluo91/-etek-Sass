@@ -15,6 +15,18 @@ p {
   font-size: 35px;
 }
 
+.alert-button {
+  background: orange;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.bigger-button {
+  background: orange;
+  color: #fff;
+  padding: 10px 15px;
+}
+
 /*
 1. pojmenování proměnných,
 2. uložení jedné proměnné do druhé,
