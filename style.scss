@@ -32,11 +32,13 @@ p {
 
 img {
     @include image;
-    @include rounded(10px);
-    border: 2px solid black;
+    @include rounded($border: 2px solid red); // zobral border a rounded nechal v defaultnej hodnote 
+    @include shadow(5px 5px 10px green, 10px 5px 10px blue); //
 }
 
 @include our-links;
+
+
 
 /*
 1. pojmenování proměnných,

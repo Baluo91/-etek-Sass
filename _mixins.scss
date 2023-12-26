@@ -1,6 +1,7 @@
 
-@mixin rounded($radius) {
+@mixin rounded($radius: 15px, $border: 2px solid blue) {
     border-radius: $radius;
+    border: $border;
 }
 
 @mixin image {
@@ -37,3 +38,7 @@
     }
 }
 //* v style.scss len vyvoláme @include our-links; */
+
+@mixin shadow($shadows...) {
+    box-shadow: $shadows;
+}
