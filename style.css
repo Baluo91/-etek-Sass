@@ -1,13 +1,13 @@
 @charset "UTF-8";
 body {
   background: rgba(78, 78, 2, 0.532);
+  font-size: 16px;
 }
 
 h1 {
   font-family: serif;
   color: black;
   text-align: center;
-  font-size: 35px;
 }
 
 h2 {
@@ -21,7 +21,6 @@ p {
   font-family: serif;
   color: black;
   text-align: center;
-  font-size: 18px;
 }
 
 .alert-button {
@@ -37,7 +36,7 @@ p {
   border: 2px solid blue;
   background: orange;
   color: #fff;
-  padding: 10px 15px;
+  padding: 0.625em 0.9375em;
 }
 
 img {
@@ -51,6 +50,7 @@ a {
   color: red;
   text-decoration: none;
   font-size: 18px;
+  border-bottom: 2px solid rgba(238, 238, 238, 0.5); /* transparentize funkcia */
 }
 a:hover {
   color: rgb(33, 33, 188);
@@ -73,4 +73,11 @@ funkce s hodnotami něco dělají (např. sčítají) a vrátí výsledek
 3. rozdělujte proměnné do skupin,
 4. používejte komentáře,
 5. proměnná pouze jednou? Nevadí
-*//*# sourceMappingURL=style.css.map */
+*/
+.darken {
+  color: red;
+  text-align: left;
+}
+.darken:hover {
+  color: #000066;
+}/*# sourceMappingURL=style.css.map */

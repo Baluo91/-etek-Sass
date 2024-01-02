@@ -1,0 +1,8 @@
+@function sum($number1, $number2) {
+   @return $number1 + $number2;
+}
+
+// výpočet em  
+@function em($pixels, $basicValue: 16px) {
+   @return ($pixels / $basicValue) * 1em;
+}

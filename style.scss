@@ -1,13 +1,14 @@
 @import "partials/variables";
 @import "partials/mixins";
+@import "partials/functions";
 
 body {
-   background: $ternary-color
+   background: $ternary-color;
+   font-size: 16px;
 }
 
 h1 {
     @include textStyle;
-    font-size: 35px;
 }
 
 h2 {
@@ -16,7 +17,6 @@ h2 {
 
 p {
     @include textStyle;
-    font-size: 18px;
 }
 
 .alert-button {
@@ -26,7 +26,8 @@ p {
 
 .bigger-button {
     @include myButton;
-    padding: 10px 15px;
+    padding: em(10px) em(15px);
+    
 }
 
 img {
@@ -57,6 +58,8 @@ a {
     text-decoration: none;
     font-size: 18px;
 
+    border-bottom: 2px solid transparentize($color: #eee, $amount: 0.5); /* transparentize funkcia */
+
     &:hover {
         color: rgb(33, 33, 188);
     }
@@ -82,4 +85,12 @@ funkce s hodnotami něco dělají (např. sčítají) a vrátí výsledek
 4. používejte komentáře,
 5. proměnná pouze jednou? Nevadí
 */
+
+.darken {
+    color: $main-color;
+    text-align: left;
+    &:hover {
+        color: darken($color: $secondary-color, $amount: 30%);
+    }
+}
 
