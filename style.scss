@@ -94,3 +94,18 @@ funkce s hodnotami něco dělají (např. sčítají) a vrátí výsledek
     }
 }
 
+// 31. SCSS a Sass - Dědění: extend
+
+.normal-notification {
+    color: white;
+    font-size: 20px;
+    background: red;
+    width: 220px;
+    text-align: center;
+}
+
+.error-notification {
+    @extend .normal-notification;
+    border: 5px solid blue;
+}
+

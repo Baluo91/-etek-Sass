@@ -80,4 +80,16 @@ funkce s hodnotami něco dělají (např. sčítají) a vrátí výsledek
 }
 .darken:hover {
   color: #000066;
+}
+
+.normal-notification, .error-notification {
+  color: white;
+  font-size: 20px;
+  background: red;
+  width: 220px;
+  text-align: center;
+}
+
+.error-notification {
+  border: 5px solid blue;
 }/*# sourceMappingURL=style.css.map */
