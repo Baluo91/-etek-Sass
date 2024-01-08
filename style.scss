@@ -32,10 +32,12 @@ p {
 
 img {
     @include image;
-    @include rounded($border: 2px solid red); // zobral border a rounded nechal v defaultnej hodnote 
+    @include rounded($border: 2px solid red); // zobral border a rounded nechal v defaultnej hodnote -) argument treba pomenovať
     @include shadow(5px 5px 10px green, 10px 5px 10px blue); //
+    padding: 30px 30px;
 }
 
+// 16. SCSS a Sass - Mixiny: všeobecná mixina
 // @include our-links;
 
 // === nesting ===
@@ -77,15 +79,6 @@ funkce s hodnotami něco dělají (např. sčítají) a vrátí výsledek
 
 */
 
-
-/*
-1. pojmenování proměnných,
-2. uložení jedné proměnné do druhé,
-3. rozdělujte proměnné do skupin,
-4. používejte komentáře,
-5. proměnná pouze jednou? Nevadí
-*/
-
 .darken {
     color: $main-color;
     text-align: left;
@@ -109,3 +102,8 @@ funkce s hodnotami něco dělají (např. sčítají) a vrátí výsledek
     border: 5px solid blue;
 }
 
+// 32. SCSS a Sass - Dědění: extend v media query
+
+@media only screen {
+
+}

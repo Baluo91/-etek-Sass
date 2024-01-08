@@ -1,5 +1,5 @@
 
-@mixin rounded($radius: 15px, $border: 2px solid blue) {
+@mixin rounded($radius: 15px /*defaultná hodnota - ak nie je vyplnená, musí byť prvá v poradí*/ , /* po čiarke môžeme dať ďalšie argumenty*/ $border: 2px solid blue) {    
     border-radius: $radius;
     border: $border;
 }
@@ -16,7 +16,7 @@
 
 @mixin textStyle {
     font-family: serif;
-    color: black;
+    color: rgb(0, 0, 0);
     text-align: center;
 }
 // === ďalší možný zápis mixiny ===
@@ -30,15 +30,18 @@
 }
 
 // === všeobecná mixina ===
-// @mixin our-links {
-//     a {
-//         color: $secondary-color;
-//         font-style: italic;
-//         text-decoration: none;
-//     }
-// }
-//* v style.scss len vyvoláme @include our-links; */
+// 16. SCSS a Sass - Mixiny: všeobecná mixina
+// v style.scss len vyvoláme @include our-links;
+ @mixin our-links {
+     a {
+         color: $secondary-color;
+         font-style: italic;
+         text-decoration: none;
+     }
+}
 
-@mixin shadow($shadows...) {
+
+
+@mixin shadow($shadows... /*3 bodky - že dam bude viac parametrov*/) {
     box-shadow: $shadows;
 }
