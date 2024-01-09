@@ -37,23 +37,23 @@ img {
     padding: 30px 30px;
 }
 
-// 16. SCSS a Sass - Mixiny: všeobecná mixina
+//** 16. SCSS a Sass - Mixiny: všeobecná mixina
 // @include our-links;
 
-// === nesting ===
+//** === nesting ===
 // .first-list {
-//    font-size: 23px;
+//     font-size: 23px;
 
-//      li {
-//          color: #fff;
+//       li {
+//           color: #fff;
 
-//          a {
-//             text-decoration: none;
-//          }
-//     }
-// }
+//           a {
+//              text-decoration: none;
+//           }
+//      }
+//  }
 
-// 25. SCSS a Sass - Nesting: nesting a hover
+//** 25. SCSS a Sass - Nesting: nesting a hover
 
 a {
     color: red;
@@ -67,17 +67,15 @@ a {
     }
 }
 
-/* čo sú to funkcie 
-Co dělá rgb? Do rgb pošlete čísla - množství červené barvy (r = red), množství zelené barvy (g = green) a množství modré barvy (b = blue). 
-My jsme dali 80 množství červené, 220 množství zelené a 180 množství modré (množství může být vždy od 0 do 255). 
-To, na co se zde díváme, je funkce. Tato funkce se jmenuje rgb a poslali jsme do ní hodnoty. 
-A tato funkce nám vrátí konkrétní barvu. 
-A přesně tím jsou specifické funkce:
-mají název,
-posíláte do nich hodnoty,
-funkce s hodnotami něco dělají (např. sčítají) a vrátí výsledek 
-
-*/
+//** čo sú to funkcie ?
+// Co dělá rgb? Do rgb pošlete čísla - množství červené barvy (r = red), množství zelené barvy (g = green) a množství modré barvy (b = blue). 
+// My jsme dali 80 množství červené, 220 množství zelené a 180 množství modré (množství může být vždy od 0 do 255). 
+// To, na co se zde díváme, je funkce. Tato funkce se jmenuje rgb a poslali jsme do ní hodnoty. 
+// A tato funkce nám vrátí konkrétní barvu. 
+// A přesně tím jsou specifické funkce:
+// mají název,
+// posíláte do nich hodnoty,
+// funkce s hodnotami něco dělají (např. sčítají) a vrátí výsledek 
 
 .darken {
     color: $main-color;
@@ -87,7 +85,7 @@ funkce s hodnotami něco dělají (např. sčítají) a vrátí výsledek
     }
 }
 
-// 31. SCSS a Sass - Dědění: extend
+//* 31. SCSS a Sass - Dědění: extend
 
 .normal-notification {
     color: white;
@@ -102,7 +100,7 @@ funkce s hodnotami něco dělají (např. sčítají) a vrátí výsledek
     border: 5px solid blue;
 }
 
-// 32. SCSS a Sass - Dědění: extend v media query
+//* 32. SCSS a Sass - Dědění: extend v media query
 
 @media only screen {
 
