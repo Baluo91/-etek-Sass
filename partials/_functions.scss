@@ -1,3 +1,5 @@
+//**29. SCSS a Sass - Funkce: vlastní funkce a jak je zapsat
+
 @function sum($number1, $number2) {
    @return $number1 + $number2;
 }
@@ -6,3 +8,5 @@
 @function em($pixels, $basicValue: 16px) {
    @return ($pixels / $basicValue) * 1em;
 }
+
+//** em hodnoty sú relatívne, napr body dám 16px , podto niečo 1em a bude to 16px. 

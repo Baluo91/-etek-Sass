@@ -6,15 +6,11 @@
 4. používejte komentáře,
 5. proměnná pouze jednou? Nevadí
 */
-body {
-  background: rgba(240, 240, 175, 0.865);
-  font-size: 16px;
-}
-
 h1 {
   font-family: serif;
   color: rgb(0, 0, 0);
   text-align: center;
+  font-size: 3.125em;
 }
 
 h2 {
@@ -43,11 +39,12 @@ p {
   border: 2px solid blue;
   background: orange;
   color: #fff;
-  padding: 0.625em 0.9375em;
+  padding: 0.3125em 0.625em;
+  font-size: 30px;
 }
 
 img {
-  width: 300px;
+  width: 200px;
   border-radius: 15px;
   border: 2px solid red;
   box-shadow: 5px 5px 10px green, 10px 5px 10px blue;
@@ -55,10 +52,10 @@ img {
 }
 
 a {
-  color: red;
+  color: white;
   text-decoration: none;
   font-size: 18px;
-  border-bottom: 2px solid rgba(238, 238, 238, 0.5); /* transparentize funkcia */
+  border-bottom: 2px solid rgba(255, 165, 0, 0.3); /* Funkce: transparentize (přednastavené funkce v SCSS) čokoľvek bude transparentné od 0.1 - 1 */
 }
 a:hover {
   color: rgb(33, 33, 188);
@@ -82,4 +79,29 @@ a:hover {
 
 .error-notification {
   border: 5px solid blue;
+}
+
+@media only screen {
+  .test-class, .another-class {
+    color: blue;
+  }
+  .another-class {
+    font-size: 30px;
+  }
+}
+.sub-title {
+  font-style: italic;
+}
+
+.sub-title {
+  font-size: 28px;
+}
+
+.new-class {
+  font-size: 25px;
+}
+
+body {
+  background: rgba(240, 240, 175, 0.865);
+  font-size: 16px;
 }/*# sourceMappingURL=style.css.map */

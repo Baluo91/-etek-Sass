@@ -2,13 +2,11 @@
 @import "partials/mixins";
 @import "partials/functions";
 
-body {
-   background: $ternary-color;
-   font-size: 16px;
-}
+
 
 h1 {
     @include textStyle;
+    font-size: em(50px);
 }
 
 h2 {
@@ -26,8 +24,8 @@ p {
 
 .bigger-button {
     @include myButton;
-    padding: em(10px) em(15px);
-    
+    padding: em(5px) em(10px);
+    font-size: sum(15px, 15px); //** použitie funkcie SUM - video 29
 }
 
 img {
@@ -56,26 +54,18 @@ img {
 //** 25. SCSS a Sass - Nesting: nesting a hover
 
 a {
-    color: red;
+    color: white;
     text-decoration: none;
     font-size: 18px;
 
-    border-bottom: 2px solid transparentize($color: #eee, $amount: 0.5); /* transparentize funkcia */
+    border-bottom: 2px solid transparentize($color: orange, $amount: 0.7); /* Funkce: transparentize (přednastavené funkce v SCSS) čokoľvek bude transparentné od 0.1 - 1 */
 
-    &:hover {
-        color: rgb(33, 33, 188);
+    &:hover {                           //** &: toto označuje horný selektor (a) 
+        color: rgb(33, 33, 188); // funkcia darken / lighten color: darken(rgb(33, 33, 188), 30%)
     }
 }
 
-//** čo sú to funkcie ?
-// Co dělá rgb? Do rgb pošlete čísla - množství červené barvy (r = red), množství zelené barvy (g = green) a množství modré barvy (b = blue). 
-// My jsme dali 80 množství červené, 220 množství zelené a 180 množství modré (množství může být vždy od 0 do 255). 
-// To, na co se zde díváme, je funkce. Tato funkce se jmenuje rgb a poslali jsme do ní hodnoty. 
-// A tato funkce nám vrátí konkrétní barvu. 
-// A přesně tím jsou specifické funkce:
-// mají název,
-// posíláte do nich hodnoty,
-// funkce s hodnotami něco dělají (např. sčítají) a vrátí výsledek 
+//*! Funkce: darken a lighten (přednastavené funkce v SCSS) //27. SCSS a Sass
 
 .darken {
     color: $main-color;
@@ -85,7 +75,20 @@ a {
     }
 }
 
-//* 31. SCSS a Sass - Dědění: extend
+//26. SCSS a Sass - Funkce: Co jsou to funkce
+//** čo sú to funkcie ?
+// Co dělá rgb? Do rgb pošlete čísla - množství červené barvy (r = red), množství zelené barvy (g = green) a množství modré barvy (b = blue). 
+// My jsme dali 80 množství červené, 220 množství zelené a 180 množství modré (množství může být vždy od 0 do 255). 
+//** To, na co se zde díváme, je funkce. Tato funkce se jmenuje rgb a poslali jsme do ní hodnoty. 
+// A tato funkce nám vrátí konkrétní barvu. 
+// A přesně tím jsou specifické funkce:
+// mají název,
+// posíláte do nich hodnoty,
+//** funkce s hodnotami něco dělají (např. sčítají) a vrátí výsledek 
+
+
+
+//* 31. SCSS a Sass - Dědění - rozšírenie: extend
 
 .normal-notification {
     color: white;
@@ -96,12 +99,73 @@ a {
 }
 
 .error-notification {
-    @extend .normal-notification;
+    @extend .normal-notification; //* obsahuje styly z .normal-notification + border...
     border: 5px solid blue;
 }
 
 //* 32. SCSS a Sass - Dědění: extend v media query
-
+//*? pozor, aby to bolo celé obalené v {} media query
 @media only screen {
+    .test-class {
+        color: blue;
+    } 
 
+    .another-class {
+        @extend .test-class;
+        font-size: 30px;
+    }
 }
+
+//* 33. SCSS a Sass - negenerovaný obsah SCSS do CSS (tzv. extend only)
+
+%test-only {
+    font-style: italic;
+}
+
+.sub-title {
+    @extend %test-only;
+    font-size: 28px;
+}
+
+//*34. SCSS a Sass - Dědění: extend pro neexistující classu
+.new-class {
+    @extend .dont-exists !optional; //*? pokiaľ class dont-exists existuje, tak ju použi, ak neexistuje, tak je to pohode - !optional zabezpečí aby nebol error
+    font-size: 25px;
+}
+
+//* 35. SCSS a Sass - Dědění: extend VS mixins
+// extend zoberie kód, ktorý sme si zadefinovali v nejakej class a použije ho u inej class
+// mixin zoberie kód, ktorý sme si zadefinovali v nejakej class (@mixin image) a použije ho u inej class (@include (image)
+//*? aký je medzi nimi rozdieľ? 
+// v podstate žiaden avšak mixiny môžu generovať viac kódu, pri extend sa neduplikuje narozdieľ od mixiny.
+
+//* 36. SCSS a Sass - Podmínky: if a else v SCSS (Sass)
+// po @if musí nasledovať podmienka ($font-size), ktorej výsledkom je niečo, čo je pravda alebo nepravda.
+// rovná sa = sa zapisuje ==
+
+// $font-size: small;
+// body {
+//     background: $ternary-color;
+//     @if $font-size == small {
+//         font-size: 16px;    // ak je to pravda, tak sa ukáže to čo je v týchto {} //*? $font-size: small;
+//  }  @else {             // ak to nie je pravda, tak sa ukáže to čo je v týchto {} //*? $font-size: niečo iné;
+//     font-size: 30px;
+//  }
+// }
+
+//* 37. SCSS a Sass - Podmínky: if, else, else if
+$font-size: small;
+body {
+    background: $ternary-color;
+
+    @if $font-size == small {
+        font-size: 16px;    // ak je to pravda, tak sa ukáže to čo je v týchto {} //*? $font-size: small;
+ }  @else if $font-size == normal {  // ak small nie je pravda, ale je pravda normal tak sa ukáže to čo je v týchto {} //*? $font-size: normal;
+    font-size: 30px;
+ } @else {              // ak nie je pravda small ani normal tak tak sa ukáže to čo je v týchto {}
+    font-size: 10px;
+ }
+}
+
+//* 38. SCSS a Sass - Podmínky: vytváříme dark, light a normal verzi stránek pomocí podmínky
+// tu pokračujeme
