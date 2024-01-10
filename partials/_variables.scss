@@ -9,9 +9,10 @@
 // === COLORS ===
 $main-color: red;
 $border-color: rgb(184, 248, 10);
-$secondary-color: blue;
-$ternary-color: rgba(240, 240, 175, 0.865);
+$secondary-color: rgba(240, 240, 175, 0.865);
+$ternary-color: blue;
 $link-color: $border-color;
+$text-color: black;
 
 // === FONTS ===
 $font-size: 35px;
@@ -19,3 +20,24 @@ $font-size: 35px;
 // === SIZES ===
 $header-height: 500px;
 $footer-height: 400px;
+
+//** 38. SCSS a Sass - Podmínky: vytváříme dark, light a normal verzi stránek pomocí podmínky
+// premwnná, o ktorej sa rozhoduje v @id - snažiť sa ju mať v rovnakom súbore
+
+// === THEME ===
+// dark, light a normal
+$theme: light;
+
+@if $theme == dark {    // ak je dark tak buď čierna a text biely
+    $secondary-color: black;
+    $text-color: white;
+} @else if $theme == light {    // ak nie je dark ale je light tak buď biela
+    $secondary-color: white;
+} //ak ani jedno z toho tak normal - basic, základná
+
+//** 39. SCSS a Sass - Podmínky a mixiny: měníme stránky přepsáním jedné proměnné
+// Značka (brand): pizza, coffee
+// Pizza bude chtít podtržené nadpisy
+// Kavárna bude chtít jinou hnědou barvu odkazů
+
+$brand: coffee; 

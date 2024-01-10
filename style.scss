@@ -2,8 +2,23 @@
 @import "partials/mixins";
 @import "partials/functions";
 
+//* 37. SCSS a Sass - Podmínky: if, else, else if
+$font-size: small;
+body {
+    background: $secondary-color;
 
+    @if $font-size == small {
+        font-size: 16px;    // ak je to pravda, tak sa ukáže to čo je v týchto {} //*? $font-size: small;
+ }  @else if $font-size == normal {  // ak small nie je pravda, ale je pravda normal tak sa ukáže to čo je v týchto {} //*? $font-size: normal;
+    font-size: 30px;
+ } @else {              // ak nie je pravda small ani normal tak tak sa ukáže to čo je v týchto {}
+    font-size: 10px;
+ }
+}
 
+h1, h2, p {
+    color: $text-color;
+}
 h1 {
     @include textStyle;
     font-size: em(50px);
@@ -11,6 +26,9 @@ h1 {
 
 h2 {
     @include big-text;
+    @include pizza {
+        text-decoration: underline;
+    }
 }
 
 p {
@@ -57,6 +75,10 @@ a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+
+    @include coffee {
+        color: brown;
+    }
 
     border-bottom: 2px solid transparentize($color: orange, $amount: 0.7); /* Funkce: transparentize (přednastavené funkce v SCSS) čokoľvek bude transparentné od 0.1 - 1 */
 
@@ -153,19 +175,7 @@ a {
 //  }
 // }
 
-//* 37. SCSS a Sass - Podmínky: if, else, else if
-$font-size: small;
-body {
-    background: $ternary-color;
 
-    @if $font-size == small {
-        font-size: 16px;    // ak je to pravda, tak sa ukáže to čo je v týchto {} //*? $font-size: small;
- }  @else if $font-size == normal {  // ak small nie je pravda, ale je pravda normal tak sa ukáže to čo je v týchto {} //*? $font-size: normal;
-    font-size: 30px;
- } @else {              // ak nie je pravda small ani normal tak tak sa ukáže to čo je v týchto {}
-    font-size: 10px;
- }
-}
 
-//* 38. SCSS a Sass - Podmínky: vytváříme dark, light a normal verzi stránek pomocí podmínky
-// tu pokračujeme
+
+//* 40. SCSS a Sass - Matematika v SCSS (matematické operace)

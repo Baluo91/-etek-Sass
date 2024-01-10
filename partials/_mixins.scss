@@ -16,7 +16,6 @@
 
 @mixin textStyle {
     font-family: serif;
-    color: rgb(0, 0, 0);
     text-align: center;
 }
 // === ďalší možný zápis mixiny ===
@@ -44,4 +43,17 @@
 
 @mixin shadow($shadows... /*3 bodky - že dam bude viac parametrov*/) {
     box-shadow: $shadows;
+}
+
+//* 39. SCSS a Sass - Podmínky a mixiny: měníme stránky přepsáním jedné proměnné
+@mixin pizza {
+    @if $brand == pizza {   // ak brand je pizza tak vloží daný content - @include ...
+        @content;
+    }
+}
+
+@mixin coffee {
+    @if $brand == coffee {   // ak brand je coffee tak vloží daný content - @include ...
+        @content;
+    }
 }
