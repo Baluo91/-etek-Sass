@@ -185,9 +185,43 @@ a {
 }
 
 //*42. SCSS a Sass - Cykly: cyklus for v SCSS a Sass
-
-@for $i from 1 through 6 {
+//*! through 6 znamená vrátane 6 , to 6 je do 5 , 6 neberie 
+@for $i from 1 through 6 { 
     .col-#{$i} {
         width: $i * 5em; 
     }
 }
+
+//*43. SCSS a Sass - Cykly: cyklus each a list
+// List
+
+$students: david, harry, ron;
+
+@each $one-student in $students {
+    .#{one-student}-profile {
+        background-image: url("img/#{$one-student}.png");
+    }
+}
+
+// Map
+$font-size: (very-small: 7px, small: 10px, medium: 15px, large: 20px);
+
+@each $name, $size in $font-size {
+    .#{$name} {
+        font-size: $size;
+    }
+}
+
+//*? do name sa uloží small... do size 7px... a ťahá sa to z $font-size
+
+// While (pokiaľ)
+
+$j: 1;
+@while $j <= 4 {
+    .picture-#{$j} {
+        width: $j * 10%;
+    }
+    $j: $j + 1;
+}
+
+//*? while dá sa zameniť s for , 1 je menšie alebo rovné ako 4 , tak sa to prevedie, pripočíta +1 a ide dalej ...
