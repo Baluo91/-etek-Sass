@@ -41,3 +41,8 @@ $theme: light;
 // Kavárna bude chtít jinou hnědou barvu odkazů
 
 $brand: coffee; 
+
+//* 40. SCSS a Sass - Matematika v SCSS (matematické operace)
+
+// $math-results: 2px * 6; // 2px * 6px = 12px*px isn't a valid CSS value - použiť zápis takto : 2px * 6
+$math-results: 2px * 6px / 6px; // to už napísalo správne 2px  --- 2px * 6px je 12px / 6px = 2px

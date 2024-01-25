@@ -107,4 +107,32 @@ a:hover {
 
 .new-class {
   font-size: 25px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.result {
+  font-size: 2px;
+}
+
+.col-1 {
+  width: 5em;
+}
+
+.col-2 {
+  width: 10em;
+}
+
+.col-3 {
+  width: 15em;
+}
+
+.col-4 {
+  width: 20em;
+}
+
+.col-5 {
+  width: 25em;
+}
+
+.col-6 {
+  width: 30em;
+}
